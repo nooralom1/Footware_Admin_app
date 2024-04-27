@@ -4,19 +4,19 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController{
 
- FirebaseFirestore firestor = FirebaseFirestore.instance;
- late CollectionReference productCollection;
-
-  @override
-  void onInit() {
-    productCollection = firestor.collection("Products");
-    super.onInit();
-  }
-
-  addProduct(){
-    DocumentReference doc = productCollection.doc();
-    Product product = Product();
-
-  }
+ // FirebaseFirestore firestor = FirebaseFirestore.instance;
+ // late CollectionReference productCollection;
+ //
+ //  @override
+ //  void onInit() {
+ //    productCollection = firestor.collection("Products");
+ //    super.onInit();
+ //  }
+ //
+ //  addProduct(){
+ //    DocumentReference doc = productCollection.doc();
+ //    Product product = Product();
+ //
+ //  }
 
 }
