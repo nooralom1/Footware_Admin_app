@@ -21,12 +21,11 @@ class HomePage extends GetView<HomeController> {
 
           if (snapshot.hasData) {
             return ListView.builder(
-                itemCount: snapshot.data!.docs.length,
+                itemCount: 10,
                 itemBuilder: (context, index) {
-                 final data = snapshot.data!.docs;
-                 print(data[index]["title"].toString());
+                  final data = snapshot.data!.docs;
                   return ListTile(
-                    title: Text(data![index]["title"].toString()),
+                    title: Text("tittle"),
                     subtitle: Text("prize--100"),
                     trailing: IconButton(
                       icon: Icon(Icons.delete),
