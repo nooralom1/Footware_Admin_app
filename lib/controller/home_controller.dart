@@ -65,7 +65,20 @@ class HomeController extends GetxController {
       Get.snackbar("Error", e.toString(),
           colorText: Colors.green);
       print(e);
-    }
+    }finally{
+      update();
+  }
+  }
+
+  deleteProduct(String id) async {
+   try {
+     await productCollection.doc(id).delete();
+     fetchProducts();
+   } catch (e) {
+     Get.snackbar("Error", e.toString(),
+         colorText: Colors.red);
+     print(e);
+   }
   }
 
   SetvalueDefault() {
