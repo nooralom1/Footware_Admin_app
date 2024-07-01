@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_project/model/product/product.dart';
@@ -47,7 +46,6 @@ class HomeController extends GetxController {
       SetvalueDefault();
     } catch (e) {
       Get.snackbar("Success", e.toString(), colorText: Colors.green);
-      print(e);
     }
   }
 
@@ -64,7 +62,6 @@ class HomeController extends GetxController {
     } catch (e) {
       Get.snackbar("Error", e.toString(),
           colorText: Colors.green);
-      print(e);
     }finally{
       update();
   }
@@ -77,7 +74,6 @@ class HomeController extends GetxController {
    } catch (e) {
      Get.snackbar("Error", e.toString(),
          colorText: Colors.red);
-     print(e);
    }
   }
 

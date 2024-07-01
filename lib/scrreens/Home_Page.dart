@@ -6,13 +6,14 @@ import 'package:get/get.dart';
 
 class HomePage extends GetView<HomeController> {
    HomePage({super.key});
+  @override
   final controller = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Footware Admin"),
+        title: const Text("Footware Admin"),
         centerTitle: true,
       ),
       body: StreamBuilder(
@@ -23,12 +24,11 @@ class HomePage extends GetView<HomeController> {
             return ListView.builder(
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (context, index) {
-                  final data = snapshot.data!.docs;
                   return ListTile(
                     title: Text(snapshot.data!.docs[index]["name"]),
                     subtitle: Text(snapshot.data!.docs[index]["price"].toString()),
                     trailing: IconButton(
-                      icon: Icon(Icons.delete),
+                      icon: const Icon(Icons.delete),
                       onPressed: () {
 
                       },
@@ -36,14 +36,14 @@ class HomePage extends GetView<HomeController> {
                   );
                 });
           }
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(AddProductPage());
+          Get.to(const AddProductPage());
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
