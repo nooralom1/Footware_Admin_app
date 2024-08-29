@@ -43,7 +43,7 @@ class HomeController extends GetxController {
       doc.set(productjson);
       Get.snackbar("Success", "product added succesfully",
           colorText: Colors.green);
-      SetvalueDefault();
+      setValueDefault();
     } catch (e) {
       Get.snackbar("Success", e.toString(), colorText: Colors.green);
     }
@@ -77,7 +77,7 @@ class HomeController extends GetxController {
    }
   }
 
-  SetvalueDefault() {
+  setValueDefault() {
     productDescriptionCtrl.clear();
     productImgCtrl.clear();
     productPriceCtrl.clear();
